@@ -6,7 +6,7 @@ const port = 3000;
 
 const kafka = new Kafka({
   clientId: "selenium-app",
-  brokers: ["localhost:9092"], 
+  brokers: ["13.203.154.186:9092"], 
 });
 
 const producer = kafka.producer();
