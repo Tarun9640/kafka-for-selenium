@@ -9,12 +9,16 @@ COPY package*.json ./
 
 # Install dependencies
 RUN npm install
+RUN npm install -g typescript
 
 # Copy the rest of the application
 COPY . .
+
+# Build TypeScript code
+RUN npx tsc -b
 
 # Expose the port your app is running on
 EXPOSE 3000
 
 # Start the application
-CMD ["npm", "start"]
+CMD ["node", "dist/index.js"]

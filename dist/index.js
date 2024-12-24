@@ -18,7 +18,7 @@ const app = (0, express_1.default)();
 const port = 3000;
 const kafka = new kafkajs_1.Kafka({
     clientId: "selenium-app",
-    brokers: ["localhost:9092"],
+    brokers: ["13.203.154.186:9092"],
 });
 const producer = kafka.producer();
 const consumer = kafka.consumer({ groupId: "selenium-app" });
